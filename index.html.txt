@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 1 Year Anniversary ❤️</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #ff758c, #ffb199);
+        color: white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .container {
+        max-width: 700px;
+        padding: 40px 20px;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 15px;
+    }
+
+    .heart {
+        font-size: 42px;
+        animation: heartbeat 1.2s infinite;
+        margin-bottom: 25px;
+    }
+
+    p {
+        font-size: 1.2em;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    .funny {
+        font-style: italic;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        font-size: 1.1em;
+        line-height: 2;
+        margin-top: 25px;
+    }
+
+    li::before {
+        content: "❤️ ";
+    }
+
+    #timer {
+        margin-top: 30px;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    button {
+        margin-top: 35px;
+        padding: 12px 28px;
+        font-size: 1em;
+        border: none;
+        border-radius: 25px;
+        background-color: white;
+        color: #ff4d6d;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+    }
+
+    @keyframes heartbeat {
+        0% { transform: scale(1); }
+        25% { transform: scale(1.2); }
+        50% { transform: scale(1); }
+        75% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Happy 1 Year Anniversary Baby ❤️</h1>
+    <div class="heart">💖</div>
+
+    <p>
+        This year with you has shown me what real love feels like.
+        Not just the fun and laughter, but the comfort, the understanding,
+        and the way we grow together. You’re not just my girlfriend —
+        you’re my partner, my peace, and my favorite person.
+        Happy anniversary, baby.
+    </p>
+
+    <p class="funny">
+        Can you believe you’ve survived one whole year with me? 😂❤️
+        Thank you for putting up with my wahala, loving me the way you do,
+        and being my favorite human on this planet.
+        Best decision I ever made was choosing you.
+    </p>
+
+    <ul>
+        <li>365 days of us</li>
+        <li>1 year, countless memories, one love</li>
+        <li>Started with a hello, now we’re here 💞</li>
+        <li>My favorite chapter is still being written with you</li>
+    </ul>
+
+    <div id="timer"></div>
+
+    <button onclick="showLove()">Tap for a Surprise 💌</button>
+</div>
+
+<script>
+function showLove() {
+    alert("Forever with you isn’t long enough ❤️");
+}
+
+// Anniversary date set to Feb 14, 2025
+const startDate = new Date("Feb 14, 2025 00:00:00");
+
+function updateTimer() {
+    const now = new Date();
+    const diff = now - startDate;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    document.getElementById("timer").innerHTML =
+        "We have been in love for " + days + " days ❤️";
+}
+
+setInterval(updateTimer, 1000);
+updateTimer();
+</script>
+
+</body>
+</html>
